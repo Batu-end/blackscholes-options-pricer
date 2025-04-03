@@ -13,16 +13,3 @@ The app is designed to help users understand how key parameters—such as stock 
 - ****:
 
 ---
-
-
-## Getting Started
-Follow the steps below to run the app locally:
-
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.8 or higher
-- Pip package manager
-
-Install the required libraries:
-```bash
-pip install streamlit numpy pandas seaborn matplotlib scipy
