@@ -18,4 +18,10 @@ The app is designed to help users understand how key parameters—such as stock 
 
 Below is the mathematical representation of the option pricing model.
 
+![Black-Scholes Formula](./images/Black-Scholes-Formula.png)
+
+# Black-Scholes Option Pricing Formula
+
+Below is the mathematical representation of the option pricing model.
+
 ![Black-Scholes Formula](./Black-Scholes-Formula.png)
