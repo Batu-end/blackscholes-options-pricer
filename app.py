@@ -1,5 +1,4 @@
 import streamlit as st
-from blackscholes import BS_CALL, BS_PUT
 import data
 from heatmap import heatmap_plot_call, heatmap_plot_put
 
@@ -12,18 +11,17 @@ st.write("You can use this app to calculate the price of a **European** call or 
 st.write("For more information about the ***Black-Scholes model***, please refer to the [***Investopedia article***](https://www.investopedia.com/terms/b/blackscholes.asp).")
 
 # Input parameters for the user
-S = st.slider("Current Asset Price (S)", min_value=50, max_value=200, value=100)
-K = st.slider("Strike Price (K)", min_value=50, max_value=200, value=100)
-T = st.slider("Time to Maturity (Years)", min_value=0.1, max_value=5.0, value=1.0, step=0.1)
-sigma = st.slider("Volatility (σ)", min_value=0.1, max_value=1.0, value=0.25, step=0.01)
-r = st.slider("Risk-Free Interest Rate (r)", min_value=0.0, max_value=0.1, value=0.05, step=0.01)
-
+S = st.slider("Current Asset Price (S)", min_value=50, max_value=200, value=100, key="slider_S")
+K = st.slider("Strike Price (K)", min_value=50, max_value=200, value=100, key="slider_K")
+T = st.slider("Time to Maturity (Years)", min_value=0.1, max_value=5.0, value=1.0, step=0.1, key="slider_T")
+sigma = st.slider("Volatility (σ)", min_value=0.1, max_value=1.0, value=0.25, step=0.01, key="slider_sigma")
+r = st.slider("Risk-Free Interest Rate (r)", min_value=0.0, max_value=0.1, value=0.05, step=0.01, key="slider_r")
 
 st.subheader("Heatmap Ranges")
-min_spot_price = st.slider("Min Spot Price", min_value=50, max_value=200, value=80)
-max_spot_price = st.slider("Max Spot Price", min_value=50, max_value=200, value=120)
-min_volatility = st.slider("Min Volatility for Heatmap", min_value=0.1, max_value=1.0, value=0.1, step=0.01)
-max_volatility = st.slider("Max Volatility for Heatmap", min_value=0.1, max_value=1.0, value=0.5, step=0.01)
+min_spot_price = st.slider("Min Spot Price", min_value=50, max_value=200, value=80, key="slider_min_spot_price")
+max_spot_price = st.slider("Max Spot Price", min_value=50, max_value=200, value=120, key="slider_max_spot_price")
+min_volatility = st.slider("Min Volatility for Heatmap", min_value=0.1, max_value=1.0, value=0.1, step=0.01, key="slider_min_volatility")
+max_volatility = st.slider("Max Volatility for Heatmap", min_value=0.1, max_value=1.0, value=0.5, step=0.01, key="slider_max_volatility")
 
 option_type = st.selectbox("Option Type", ["Call", "Put"])
 

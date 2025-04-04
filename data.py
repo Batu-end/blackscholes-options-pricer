@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 from blackscholes import BS_CALL, BS_PUT
-from app import *
 
 # Prepare data for call and put options
 def prepare_call_data(min_spot_price, max_spot_price, min_volatility, max_volatility, K, T, r):
