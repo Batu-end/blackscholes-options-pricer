@@ -16,7 +16,7 @@ The app is designed to help users understand how key parameters—such as stock 
 
 # Black-Scholes Option Pricing Formula
 
-The *Black-Scholes model*, developed by Fischer Black and Myron Scholes, revolutionized options pricing in finance. Later, _Robert Merton_ expanded upon their work by introducing mathematical refinements and applying the model more broadly. Together, the _Black-Scholes-Merton_ framework became the cornerstone of modern financial theory and remains widely used for pricing _European-style_ options and managing financial risk.
+The *Black-Scholes model*, developed by _Fischer Black_ and _Myron Scholes_, revolutionized options pricing in finance. Later, _Robert Merton_ expanded upon their work by introducing mathematical refinements and applying the model more broadly. Together, the _Black-Scholes-Merton_ framework became the cornerstone of modern financial theory and remains widely used for pricing _European-style_ options and managing financial risk.
 
 If you want to learn more about it, you I strongly advise outside sources such as [***Wikipedia***](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) or [**_Investopedia Article_**](https://www.investopedia.com/terms/b/blackscholes.asp).
 
