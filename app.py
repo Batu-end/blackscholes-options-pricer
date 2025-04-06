@@ -8,8 +8,31 @@ st.title(":green[*Black-Scholes Option Pricing Model*]")
 st.markdown("---")
 st.subheader("This is a :grey[***Black-Scholes***] option pricing model calculator.")
 st.subheader("You can use this web app to calculate the price of a :blue[**European**] call or put option based on the ***Black-Scholes*** formula.")
-st.subheader("For more information about the ***Black-Scholes model***, please refer to the [***Investopedia article***](https://www.investopedia.com/terms/b/blackscholes.asp) about it.")
+st.subheader("Below is the mathematical formula used to calculate the option price.")
+st.subheader("If you wish to learn more information about the ***Black-Scholes model***, please refer to the [***Investopedia article***](https://www.investopedia.com/terms/b/blackscholes.asp) about it.")
 
+st.markdown("---")
+
+with st.expander("Show Black-Scholes Equations"):
+    st.latex(r'''C(S,t) = S\cdot N(d_1) - K\cdot e^{-r(T-t)}\cdot N(d_2)''')
+    st.latex(r'''P(S,t) = K\cdot e^{-r(T-t)}\cdot N(-d_2) - S\cdot N(-d_1)''')
+    st.latex(r'''d_1 = \frac{\ln(\frac{S}{K}) + (r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}''')
+    st.latex(r'''d_2 = d_1 - \sigma\sqrt{T-t}''')
+    
+    st.markdown("**Where:**")
+    st.markdown("""
+    - S = Current stock (or asset) price
+    - K = Strike price
+    - r = Risk-free interest rate
+    - t = Current time
+    - T = Time to maturity
+    - σ (sigma) = Volatility of the asset
+    - N(x) = Cumulative distribution function of standard normal distribution
+    """)
+    
+    st.markdown("**Put-Call Parity:**")
+    st.latex(r'''C - P = S - Ke^{-r(T-t)}''')
+            
 st.markdown("---")
 
 # Input parameters for the user
@@ -23,7 +46,7 @@ sigma = st.slider("Volatility (σ)", min_value=0.1, max_value=1.0, value=0.25, s
 call_price = data.BS_CALL(S, K, T, r, sigma)
 put_price = data.BS_PUT(S, K, T, r, sigma)
 
-# Initialize session state for previous call and put prices
+# Initialize session state for previous call and put prices         ## BURAYA DÜZENLEME YAPILACAK: BIR ONCEKI HESAPLANAN FİYATIN ÜZERİNE YAZMAK İÇİN.
 if "prev_call_price" not in st.session_state:
     st.session_state["prev_call_price"] = call_price
 if "prev_put_price" not in st.session_state:
