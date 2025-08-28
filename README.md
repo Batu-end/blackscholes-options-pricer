@@ -14,15 +14,24 @@ The app is designed to help users understand how key parameters—such as stock 
 
 ---
 
-# Black-Scholes Option Pricing Formula
+## The Black-Scholes Formula
 
-The *Black-Scholes model*, developed by _Fischer Black_ and _Myron Scholes_, revolutionized options pricing in finance. Later, _Robert Merton_ expanded upon their work by introducing mathematical refinements and applying the model more broadly. Together, the _Black-Scholes-Merton_ framework became the cornerstone of modern financial theory and remains widely used for pricing _European-style_ options and managing financial risk.
+> The Black-Scholes model, developed by Fischer Black and Myron Scholes, revolutionized options pricing in finance. Later, Robert Merton expanded upon their work by introducing mathematical refinements and applying the model more broadly. Together, the Black-Scholes-Merton framework became the cornerstone of modern financial theory...
+
+### Mathematical Formula
+<p align="center">
+  <img src="./images/Black-Scholes-Formula.png" alt="Black-Scholes Formula" width="600">
+</p>
+
+To learn more about the math behind the model, see [**Wikipedia**](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) or [**Investopedia**](https://www.investopedia.com/terms/b/blackscholes.asp).
 
 ---
 
-### Below is the mathematical formula of the model. It is also included on the app's sidebar.
-
-![Black-Scholes Formula](./images/Black-Scholes-Formula.png)
+## Tech Stack
+* **Framework:** [Streamlit](https://streamlit.io/)
+* **Data Manipulation:** [NumPy](https://numpy.org/) & [Pandas](https://pandas.pydata.org/)
+* **Visualization:** [Seaborn](https://seaborn.pydata.org/) & [Matplotlib](https://matplotlib.org/)
+* **Financial Computation:** [SciPy](https://scipy.org/)
 
 ---
 
@@ -30,7 +39,4 @@ If you want to learn more about the formula, or are curious of the deeper math b
 
 ---
 
-## Getting Started
-1. Move into a directory and clone the repository:
-   ```bash
-   git clone https://github.com/Batu-end/blackscholes-options-pricer.git
+## 🚀 [Click Here for the Live Application](https://blackscholesoptionpricer.streamlit.app/)
