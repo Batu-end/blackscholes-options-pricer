@@ -1,16 +1,47 @@
 # Black-Scholes Option Pricer
 
 ## Overview
-This app allows users to explore the ***Black-Scholes model*** for pricing options. It provides interactive widgets for input variables and visualizes the resulting option prices using a heatmap.
+This app allows users to explore the ***Black-Scholes model*** for pricing European options. With a **beginner-friendly UI**, it provides interactive widgets for all input variables and visualizes the resulting option prices using dynamic heatmaps.
 
 The app is designed to help users understand how key parameters—such as stock price, strike price, volatility, and risk-free rate—impact option pricing.
 
 ---
 
-## Features
-- **Interactive widgets**: Adjust parameters like stock price, volatility, and risk-free rate using intuitive sliders.
-- **Dynamic Heatmaps**: Visualize option prices with real-time Seaborn heatmaps.
-- **Real-Time Call/Put Pricing**: Instantly compute and compare option prices using the Black-Scholes model.
+## 🚀 [Click Here for the Live Application](https://blackscholesoptionpricer.streamlit.app/)
+
+---
+
+## App Preview
+
+The interface is designed to be intuitive. Simply choose an option type from the dropdown menu and adjust the sliders to see how the option's price changes in real-time.
+
+<p align="center">
+  <img src="./images/Dropdown.gif" alt="Dropdown Menu GIF" width="600">
+  <br>
+  <em>Select either a Call or Put option to begin.</em>
+</p>
+
+<p align="center">
+  <img src="./images/Demo.gif" alt="Sliders GIF" width="600">
+  <br>
+  <em>Adjust financial parameters like volatility and interest rates with simple sliders.</em>
+</p>
+
+---
+
+## The results are instantly visualized in a heatmap and compared directly in a summary table.
+<p align="center">
+  <img src="./images/PutMap.png" alt="Put Heatmap GIF" width="48%">
+  <img src="./images/CallMap.png" alt="Call Heatmap" width="48%">
+  <br>
+  <em>Dynamic heatmaps for both Put (left) and Call (right) options.</em>
+</p>
+
+<p align="center">
+  <img src="./images/Comparison.png" alt="Comparison of Results" width="30%">
+  <br>
+  <em>And topped off with an easy to follow comparison in USD$.</em>
+</p>
 
 ---
 
@@ -32,11 +63,3 @@ To learn more about the math behind the model, see [**Wikipedia**](https://en.wi
 * **Data Manipulation:** [NumPy](https://numpy.org/) & [Pandas](https://pandas.pydata.org/)
 * **Visualization:** [Seaborn](https://seaborn.pydata.org/) & [Matplotlib](https://matplotlib.org/)
 * **Financial Computation:** [SciPy](https://scipy.org/)
-
----
-
-If you want to learn more about the formula, or are curious of the deeper math behind it, I strongly advise outside sources such as [***Wikipedia***](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) or [**_Investopedia_**](https://www.investopedia.com/terms/b/blackscholes.asp).
-
----
-
-## 🚀 [Click Here for the Live Application](https://blackscholesoptionpricer.streamlit.app/)
